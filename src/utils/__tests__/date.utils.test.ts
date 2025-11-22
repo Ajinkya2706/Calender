@@ -47,8 +47,8 @@ describe('date.utils', () => {
     it('filters events for specific day', () => {
       const date = new Date(2024, 0, 15);
       const events = [
-        { startDate: new Date(2024, 0, 15, 9, 0), endDate: new Date(2024, 0, 15, 10, 0) },
-        { startDate: new Date(2024, 0, 16, 9, 0), endDate: new Date(2024, 0, 16, 10, 0) },
+        { id: '1', title: 'Event 1', startDate: new Date(2024, 0, 15, 9, 0), endDate: new Date(2024, 0, 15, 10, 0) },
+        { id: '2', title: 'Event 2', startDate: new Date(2024, 0, 16, 9, 0), endDate: new Date(2024, 0, 16, 10, 0) },
       ];
       const result = getEventsForDay(events, date);
       expect(result).toHaveLength(1);

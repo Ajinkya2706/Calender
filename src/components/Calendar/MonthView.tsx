@@ -28,15 +28,6 @@ export const MonthView = React.memo<MonthViewProps>(({
   // Week day headers - using uppercase for consistency
   const weekDays = useMemo(() => ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'], []);
   
-  // Check if month has any events (for empty state)
-  const hasEvents = useMemo(() => {
-    return events.some(event => {
-      const eventDate = new Date(event.startDate);
-      return eventDate.getMonth() === currentDate.getMonth() &&
-             eventDate.getFullYear() === currentDate.getFullYear();
-    });
-  }, [events, currentDate]);
-  
   return (
     <div className="w-full">
       <div className="grid grid-cols-7 gap-px bg-neutral-200 border border-neutral-200 rounded-lg overflow-hidden">

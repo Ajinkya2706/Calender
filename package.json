@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -17,15 +19,6 @@
     "clsx": "^2.1.1",
     "zustand": "^4.5.4",
     "framer-motion": "^11.5.4"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.1.3",

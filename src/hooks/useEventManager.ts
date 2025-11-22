@@ -26,7 +26,7 @@ interface UseEventManagerReturn {
  */
 
 export const useEventManager = ({
-  events,
+  events: _events,
   onEventAdd,
   onEventUpdate,
   onEventDelete,

@@ -3,7 +3,7 @@ import { useTheme } from '@/hooks/useTheme';
 import clsx from 'clsx';
 
 export const ThemeToggle = () => {
-  const { theme, toggleTheme, isDark } = useTheme();
+  const { toggleTheme, isDark } = useTheme();
 
   const handleClick = () => {
     toggleTheme();

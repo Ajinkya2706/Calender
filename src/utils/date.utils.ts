@@ -1,4 +1,4 @@
-import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameDay, format } from 'date-fns';
+import { startOfMonth, startOfWeek, addDays, isSameDay, format } from 'date-fns';
 
 export const isSameDayCheck = (date1: Date, date2: Date): boolean => {
   return isSameDay(date1, date2);
@@ -11,7 +11,6 @@ export const isSameDayCheck = (date1: Date, date2: Date): boolean => {
  */
 export const getCalendarGrid = (date: Date): Date[] => {
   const monthStart = startOfMonth(date);
-  const monthEnd = endOfMonth(date);
   const calendarStart = startOfWeek(monthStart, { weekStartsOn: 0 });
   
   const grid: Date[] = [];
@@ -57,7 +56,9 @@ export const isCurrentMonth = (date: Date, currentMonth: Date): boolean => {
          date.getFullYear() === currentMonth.getFullYear();
 };
 
-export const getEventsForDay = (events: Array<{ startDate: Date; endDate: Date }>, date: Date): Array<{ startDate: Date; endDate: Date }> => {
+import type { CalendarEvent } from '@/components/Calendar/CalendarView.types';
+
+export const getEventsForDay = (events: CalendarEvent[], date: Date): CalendarEvent[] => {
   const dayStart = new Date(date);
   dayStart.setHours(0, 0, 0, 0);
   const dayEnd = new Date(date);
@@ -70,7 +71,7 @@ export const getEventsForDay = (events: Array<{ startDate: Date; endDate: Date }
   });
 };
 
-export const getEventsForWeekDay = (events: Array<{ startDate: Date; endDate: Date }>, date: Date): Array<{ startDate: Date; endDate: Date }> => {
+export const getEventsForWeekDay = (events: CalendarEvent[], date: Date): CalendarEvent[] => {
   const dayStart = new Date(date);
   dayStart.setHours(0, 0, 0, 0);
   const dayEnd = new Date(date);

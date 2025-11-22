@@ -147,7 +147,7 @@ export const EventModal = React.memo<EventModalProps>(({
     >
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-neutral-700 mb-1.5">
+          <label className="block  text-sm font-medium text-neutral-700 mb-1.5">
             Title <span className="text-red-500">*</span>
           </label>
           <input
@@ -155,7 +155,7 @@ export const EventModal = React.memo<EventModalProps>(({
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             maxLength={100}
-            className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
+            className=" bg-black text-white w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
             placeholder="Event title"
             required
           />
@@ -171,7 +171,7 @@ export const EventModal = React.memo<EventModalProps>(({
             onChange={(e) => setDescription(e.target.value)}
             maxLength={500}
             rows={3}
-            className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring resize-none"
+            className=" bg-black text-white w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring resize-none"
             placeholder="Event description (optional)"
           />
           <p className="mt-1 text-xs text-neutral-500">{description.length}/500</p>
@@ -180,14 +180,14 @@ export const EventModal = React.memo<EventModalProps>(({
         
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-neutral-700 mb-1.5">
+            <label className=" block text-sm font-medium text-neutral-700 mb-1.5">
               Start Date <span className="text-red-500">*</span>
             </label>
             <input
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
+              className=" bg-black text-white w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
               required
             />
           </div>
@@ -199,7 +199,7 @@ export const EventModal = React.memo<EventModalProps>(({
               type="time"
               value={startTime}
               onChange={(e) => setStartTime(e.target.value)}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
+              className=" bg-black text-white w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
               required
             />
           </div>
@@ -207,14 +207,14 @@ export const EventModal = React.memo<EventModalProps>(({
         
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-neutral-700 mb-1.5">
+            <label className=" block text-sm font-medium text-neutral-700 mb-1.5">
               End Date <span className="text-red-500">*</span>
             </label>
             <input
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
+              className=" bg-black text-white w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
               required
             />
           </div>
@@ -226,7 +226,7 @@ export const EventModal = React.memo<EventModalProps>(({
               type="time"
               value={endTime}
               onChange={(e) => setEndTime(e.target.value)}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
+              className=" bg-black text-white w-full px-3 py-2 border border-neutral-300 rounded-lg focus-visible-ring"
               required
             />
           </div>
